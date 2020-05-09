@@ -1,0 +1,23 @@
+def check_fermat(a,b,c,n):
+    if n >=  2:
+        v1 = (a**n) + (b**n)
+        v2 = c**n
+        if v1 == v2:
+            print("HOLY SMOKES {0} == {1}".format(v1,v2))
+        else:
+            print("NO, that dosen't work {0} != {1}".format(v1,v2))
+    else:
+        print('n = {}, is less than 2'.format(n))
+
+print('..... Fermats Last Theorem .....a^n + b^n = c^n...')
+
+a1  = input("Enter the values for a : ")
+b1  = input("Enter the values for b : ")
+c1  = input("Enter the values for c : ")
+n1  = input("Enter the values for n : ")
+a2 = int(a1)
+b2 = int(b1)
+c2 = int(c1)
+n2 = int(n1)
+
+check_fermat(a2,b2,c2,n2)
