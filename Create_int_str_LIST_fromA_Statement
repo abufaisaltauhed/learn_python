@@ -1,0 +1,18 @@
+Create_int_str_LIST_fromA_Statement.py
+import re
+n = "I have 25 and 36 appels of red and green"
+num = '[0-9]+'
+wor = '\w+'
+x = re.findall(num,n)
+y = re.findall(wor,n)
+print(x)
+print(y)
+for j in x:
+    y.remove(j)
+    
+print("...",y)
+xx = []
+for jj in x:
+    xx.append(int(jj))
+print(xx)   
+print(type(xx[0]))
