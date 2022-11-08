@@ -1,0 +1,20 @@
+ FindValidIPwitRegularprogramConcept.py
+#IP = "292.168.1.1"
+def Ipad(IP):
+    c = 0
+    l = IP.split(".")
+    l1  = []
+    for e in l:
+        l1.append(int(e))
+    for i in l1:
+        if i > 255 or i == 0:
+            print(IP," is INVALID IP")
+            break
+        else:
+            c = c + 1
+    if c == 4:
+        print(IP, " is valid IP  ")
+
+address = input('Enterh the ip address ')
+Ipad(address)
+
