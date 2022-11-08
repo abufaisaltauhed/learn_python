@@ -1,0 +1,9 @@
+IncrementTheThirdOctetOfAnIPv4Address.py
+# Increment the Third Octet of an IPv4 address
+c = 0
+for i in range(256):
+    for j in range(256):
+        print("172.16.%d.%d"%(i,j)) 
+        c = c + 1
+print(c)
+
