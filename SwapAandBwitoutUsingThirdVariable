@@ -1,0 +1,12 @@
+SwapAandBwitoutUsingThirdVariable.py
+x = input("a = ")
+y = input("b = ")
+a = int(x)
+b = int(y)
+print("Print a = {} and b = {} before the swap".format(a,b))
+a = a + b
+b = a - b
+a = a - b
+print("\n \n")
+print("a = ",a)
+print("b =", b)
