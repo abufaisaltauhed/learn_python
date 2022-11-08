@@ -1,0 +1,16 @@
+PalindromProgram.py 
+name = input("Enter a String .... : ")
+print ("The Entered String is {}".format(name))
+k = ''
+for i in name:
+    k = i + k
+    print("inside the for look...", k)
+
+print(k)    
+print("Checking for palindrom \n\n\n")
+if name == k:
+    print(" It is a Palindrom ")
+    print(name , " ==== " , k)
+else:
+    print("It is not a palindrom")
+
