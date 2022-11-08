@@ -1,0 +1,9 @@
+CreateListfromDict.py
+d1 = {"one" : 1, "two" : 2, "three" : 3, "four" :4}
+l1 = []
+print(d1)
+for i in d1:
+    l1.append(i)
+for i in d1:
+    l1.append(d1[i])
+print(l1)
