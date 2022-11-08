@@ -1,0 +1,4 @@
+PrintDictionayItemWhichIsListWithIndexValue.py
+d1 = {"a" : "aa","b":"bbb","n":[1,2,3,4]}
+x = d1["n"]
+print(x[2])
