@@ -1,0 +1,13 @@
+ReadFromFileAndFindTheValue.py
+import re
+f = open("file.txt","r")
+readFile = f.read()
+r1 = "\s+\d+.\d+.\d+.\d+\s+"
+output = re.findall(r1,readFile)
+x = len(output)
+print(x)
+#print(output)
+for i in output:
+    print(i)
+f.close()
+
