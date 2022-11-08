@@ -1,0 +1,14 @@
+ConvertListToDictionary.py
+def dict1(l1,l2):
+    d1 = {}
+    for k in l1:
+        for v in l2:
+            d1[v] = k
+            l2.remove(v)
+            break
+    print(d1)
+l1 = [10,11,12,13,14,15]
+l2 = ["a", "b", "c", "d", "e"]
+dict1(l1,l2)
+
+
