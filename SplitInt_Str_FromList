@@ -1,0 +1,15 @@
+<pre>SplitInt_Str_FromList.py
+l1 = [&apos;a&apos;,100,&apos;b&apos;,200,&apos;c&apos;,300,&apos;d&apos;,400]
+#print(l1)
+a = []
+s = []
+for i in l1:
+    if isinstance(i , int):
+         a.append(i)
+    else:
+        s.append(i)
+
+print(a)
+print(s)
+
+</pre>
