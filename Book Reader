@@ -1,0 +1,36 @@
+ 
+import re
+import requests
+
+url = 'https://www.gutenberg.org/files/48320/48320-0.txt'
+
+data = requests.get(url)
+
+print(data.text)
+################################################
+
+f = open("Gutenberg.txt", "w")
+f.write(data.text)
+f.close()
+
+#open and read the file after the appending:
+f = open("Gutenberg.txt", "r")
+#print(f.read())
+fr = f.read()
+print(fr)
+#####################################################
+x = re.findall("SHERLOCK HOLMES", fr, re. IGNORECASE)
+y = re.findall("you see, but you do not observe", fr, re. IGNORECASE)
+z = re.findall("elementary, dear Watson", fr, re. IGNORECASE)
+print(len(x)) 
+print(len(y))
+print(len(z))
+
+print("The frequency of the following statements is as follows: ")
+print("a.	SHERLOCK HOLMES :",len(x))
+print("b.	you see, but you do not observe : ",len(y))
+print("c.	elementary, dear Watson : ",len(z))
+
+
+
+
