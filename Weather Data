@@ -25,3 +25,30 @@ for i in range(len(data['features'])):
 print(t.draw())
 
 
+###############################################################
+############ Same Code with "weather_data" Function############
+..............................................................
+
+import json
+from urllib.request import urlopen
+from texttable import Texttable
+
+def weather_data(url_arg):
+    with urlopen(url_arg) as response:
+        source = response.read()
+    data = json.loads(source)
+    t = Texttable()
+    for i in range(len(data['features'])):
+        Type = (data['features'][i]['properties']['@type'])
+        Descriptio = (data['features'][i]['properties']['description'])
+        Id = (data['features'][i]['properties']['id'])
+        t.add_rows([['Serial','Id','Type','DESCRIPTION'],[i, Id, Type , Descriptio]])
+    print(t.draw())
+
+
+
+url_detail = "https://api.weather.gov/alerts?active=true&region=PA"
+weather_data(url_detail)    
+
+
+
