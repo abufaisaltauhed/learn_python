@@ -1,0 +1,27 @@
+
+# cat test.py 
+import json
+from urllib.request import urlopen
+from texttable import Texttable
+
+with urlopen("https://api.weather.gov/alerts?active=true&region=PA") as response:
+    source = response.read()
+
+data = json.loads(source)
+#print(json.dumps(data, indent=2))
+##print(len(data['features'][16]))
+##print(data['features'][0]['properties']['@type'])
+##print(data['features'][0]['properties']['description'])
+##print(data['features'][0]['properties']['id'])
+##print(data['features'][1]['properties']['id'])
+t = Texttable()
+print("......................")
+for i in range(len(data['features'])):
+    Type = (data['features'][i]['properties']['@type'])
+    Descriptio = (data['features'][i]['properties']['description'])
+    Id = (data['features'][i]['properties']['id'])
+    t.add_rows([['Serial','Id','Type','DESCRIPTION'],[i, Id, Type , Descriptio]])
+
+print(t.draw())
+
+
