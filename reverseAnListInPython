@@ -1,0 +1,29 @@
+ reverseAList.py 
+def reverseList(A,start, end):
+    while start < end:
+        A[start], A[end] = A[end],A[start]
+        start +=1
+        end -=1
+A  = [10,20,30,40,50]
+print(A)
+start = 0
+end = 4
+reverseList(A, start,end)
+print("After the reverse with while loop",A)
+
+def revWithFor(A,start,end):
+    for i in range(0,5):
+        if start > end:
+            break
+        A[start], A[end] = A[end],A[start]
+        start +=1
+        end -=1
+ 
+       
+A  = [10,20,30,40,50]
+print(A)
+start = 0
+end = 4
+revWithFor(A, start, end)
+print("Reverse with For loop", A)
+
